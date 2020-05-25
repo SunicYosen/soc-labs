@@ -2,6 +2,6 @@
 
 Labs projects for SoC
 
-## [Lab1](/lab1)
+## [Lab0](/lab0)
 
 Basic usage of VCS & Verdi & DC
