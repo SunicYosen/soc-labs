@@ -7,19 +7,6 @@
 #------------------------------------
 set mapped_dir  $mapped_path
 set reports_dir $reports_path
-if { [ file exists $mapped_dir ] } {
-    file delete -force $mapped_dir
-    file mkdir $mapped_dir
-} else {
-    file mkdir $mapped_dir
-}
-
-if { [file exists $reports_dir] } {
-    file delete -force $reports_dir
-    file mkdir $reports_dir
-} else {
-    file mkdir $reports_dir
-}
 
 #------------------------------------
 # Write mapped file

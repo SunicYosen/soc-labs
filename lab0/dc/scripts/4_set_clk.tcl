@@ -12,13 +12,12 @@
 set CLK_PERIOD  4
 
 #------------------------------------
-# clock source definition
+# Clock source definition
 #------------------------------------
 create_clock -name "sys_clk" -period $CLK_PERIOD [get_ports clk]
 
-
 #------------------------------------
-# uncertainty and transition time
+# Uncertainty and transition time
 #------------------------------------
 set_clock_uncertainty -setup 0.5 sys_clk
 set_clock_uncertainty -hold  0.5 sys_clk
@@ -26,10 +25,11 @@ set_clock_transition         0.5 sys_clk
 set_dont_touch_network [get_clocks sys_clk]
 
 #------------------------------------
-# set drc free net
+# Set drc free net
 #------------------------------------
-echo "set_ideal_network"
 set_ideal_network [get_ports clk] -no_propagate
-echo "set_ideal_network_end"
 
+#------------------------------------------------------------------------
+# Related clock to fix hold violations at registers during compilation.
+#------------------------------------------------------------------------
 set_fix_hold sys_clk

@@ -21,15 +21,23 @@ set     link_library            [list  "*" $target_library ]
 #-----------------------
 define_name_rules BORG -type net -allowed "A-Z a-z 0-9" -first_restricted "_0-9\\" \
         -last_restricted "_0-9\\" -max_length 30
+
+#-----------------------
 # List name rules.
-report_name_rules BORG
+report_name_rules BORG > $reports_path/name_rules.rpt
+
+#---------------------------------------------------------------------
 # Specify the style to use in naming an individual port member 
 set bus_naming_style {%s[%d]}
 
 #-----------------------
 # Others
 #-----------------------
+
+#----------------------------------------------
 # Turn tri state nets from "tri" to "wire"
 set verilogout_no_tri true
+
+#---------------------------------------------------------------------
 # Write out the gate level netlist so that all of the unused pins
 set verilogout_show_unconnected_pins true
