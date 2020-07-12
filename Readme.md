@@ -6,11 +6,11 @@ Labs projects for SoC
 
 Basic usage of VCS & Verdi & DC
 
-## [Lab1](/lab1)
+## [Project](/project)
 
 Convolution function: 
 
-- Verilog. [SRC](/lab1/src)
-- Simlute by vcs & verdi. [VCS & Verdi](/lab1/vcs-verdi)
-- Synthesis by DC. [DC](/lab1/dc)
-- Physical Implemention By [ICC](/lab1/icc)
+- Verilog. [SRC](/project/src)
+- Simlute by vcs & verdi. [VCS & Verdi](/project/vcs-verdi)
+- Synthesis by DC. [DC](/project/dc)
+- Physical Implemention By [ICC](/project/icc)
