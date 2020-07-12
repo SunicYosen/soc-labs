@@ -145,7 +145,7 @@ else
 // ===============================
 parameter I_LOG_DEEPTH = 2;
 parameter W_LOG_DEEPTH = 2;
-parameter O_LOG_DEEPTH = 32;
+parameter O_LOG_DEEPTH = 5;
 parameter D_WIDTH      = 32;
 // Input FIFO
 fifo #(.LOG_DEEPTH(I_LOG_DEEPTH), .D_WIDTH(D_WIDTH))
